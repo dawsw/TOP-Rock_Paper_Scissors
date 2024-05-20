@@ -1,14 +1,25 @@
 function getComputerChoice(number) {
-    let choice;
     let result = Math.random(number)
 
     if (result == 0) {
-         return choice = "Rock";
+         return "rock";
     }
     else if (result == 1) {
-        return choice = "Paper";
+        return "paper";
     }
     else {
-        return choice = "Scissors";
+        return "scissors";
     }
 }
+
+
+function getHumanChoice() {
+
+    while (true) {
+        choice = prompt("Do you choose Rock, Paper, or Scissors?");
+
+        if (choice.toLowerCase() == "rock" || choice.toLowerCase() == "paper" || choice.toLowerCase() == "scissors")
+            return choice;
+}}
+
+console.log(getHumanChoice())
