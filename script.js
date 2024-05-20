@@ -1,6 +1,9 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const computerSelection = getComputerChoice(3);
+const humanSelection = getHumanChoice();
+
 
 function getComputerChoice(number) {
     let result = Math.random(number)
@@ -20,37 +23,36 @@ function getComputerChoice(number) {
 function getHumanChoice() {
 
     while (true) {
-        choice = prompt("Do you choose Rock, Paper, or Scissors?");
+        choice = prompt("Do you choose Rock, Paper, or Scissors?").toLowerCase();
 
         if (choice.toLowerCase() == "rock" || choice.toLowerCase() == "paper" || choice.toLowerCase() == "scissors")
             return choice;
 }}
 
 function playRound(humanChoice, computerChoice) {
-    switch(humanChoice, computerChoice) {
-        case humanChoice == 'rock' && computerChoice == 'paper':
+
+    switch(humanChoice + computerChoice) {
+        case 'rockpaper':
             computerScore += 1;
             return "You lose! Paper beats Rock.";
-        case humanChoice == 'paper' && computerChoice == 'scissors':
+        case 'paperscissors':
             computerScore += 1;
             return "You lose! Scissors beats Paper.";
-        case humanChoice == 'scissors' && computerChoice == 'rock':
+        case 'scissorsrock':
             computerScore += 1;
             return "You lose! Rock beats Scissors.";
-        case humanChoice == 'rock' && computerChoice == 'scissors':
+        case 'rockscissors':
             computerScore += 1;
             return "You Win! Rock beats Scissors.";
-        case humanChoice == 'paper' && computerChoice == 'rock':
+        case 'paperrock':
             computerScore += 1;
             return "You Win! Paper beats Rock.";
-        case humanChoice == 'scissors' && computerChoice == 'paper':
+        case 'scissorspaper':
             computerScore += 1;
             return "You Win! Scissors beats Paper.";
         case humanChoice == computerChoice:
             return "It's a Tie!";
-            
-            
     }
 }
 
-console.log(getHumanChoice())
+console.log(playRound(humanSelection, computerSelection))
