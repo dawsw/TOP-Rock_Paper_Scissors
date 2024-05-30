@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="name-container">
+        <div id="player-container">
+            <h1 id="player-name">Player:
+                <span id="player-score">0</span>
+            </h1>
+        </div>
+        <div id="computer-container">
+            <h1 id="computer-name">Computer:
+                <span id="computer-score">0</span>
+            </h1>
+            
+        </div>
+    </div>
+    <div id="battle-container">
+        <img src="images/rock.png" id="player-choice">
+        <h3>vs</h3>
+        <img src="images/rock.png" id="computer-choice">
+    </div>
+    <div id="winner-announcement">Computer Wins!
+        <button id="playagain-button">Play Again</button>
+    </div>
+    
+    <div id="rps-container">
+        <button><img class="rps-image" src="images/rock.png" id="rock"></button>
+        <button><img class="rps-image" src="images/paper.png" id="paper"></button>
+        <button><img class="rps-image" src="images/scissors.png" id="scissors"></button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
