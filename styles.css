@@ -93,8 +93,3 @@ body, .body{
     border-radius: 10px;
 }
 
-#rockbutton, #paperbutton, #scissorbutton {
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
