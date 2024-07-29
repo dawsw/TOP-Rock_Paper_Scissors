@@ -1,4 +1,4 @@
-# ODIN_Rock_Paper_Scissors
+# TOP-Rock_Paper_Scissors
 
 Welcome to my Rock-Paper-Scissors project! This project is a simple implementation of the classic game Rock-Paper-Scissors, developed as part of The Odin Project's curriculum.
 
